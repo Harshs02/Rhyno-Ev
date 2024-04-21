@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhyno Ev</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        footer {
+            background-color: #252525;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #F9ED32;
+        }
+
+        /* USP Carousel */
+        .usp-carousel {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            overflow: hidden;
+        }
+
+        .usp-carousel .carousel-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slide 10s infinite;
+        }
+
+        .usp-carousel .carousel-content p {
+            text-align: center;
+        }
+
+        @keyframes slide {
+            0%, 20% {
+                transform: translateY(0);
+            }
+            25%, 45% {
+                transform: translateY(-100%);
+            }
+            50%, 70% {
+                transform: translateY(-200%);
+            }
+            75%, 95% {
+                transform: translateY(-300%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating Button */
+        .float-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #F9ED32;
+            color: #252525;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        .float-btn:hover {
+            background-color: #FFF225;
+        }
+
+        /* Rental Section */
+        #rental .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #rental .container h2 {
+            margin-bottom: 20px;
+        }
+
+        #rental .container p {
+            margin-bottom: 20px;
+        }
+
+        #rental .container .app-buttons {
+            margin-top: 20px;
+        }
+
+        #rental .container .app-button {
+            display: inline-block;
+            margin-right: 10px;
+            background-color: #F9ED32;
+            color: #252525;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #rental .container .app-button img {
+            width: 24px; /* Adjust icon size */
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        #rental .container .app-button:hover {
+            background-color: #FFF225;
+        }
+
+        /* Add spacing for other sections if needed */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+         h2 {
+            color: #F9ED32;
+         
+            text-align: center;
+            font-family: monospace;
+            overflow: hidden; 
+            border-right: .15em solid orange; 
+            white-space: nowrap; 
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: 
+                typing 3.5s steps(30, end),
+                blink-caret .5s step-end infinite;
+            }
+
+            /* The typing effect */
+            @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+            }
+
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange }
+            }
+            .vehicle{
+                color: #F9ED32;
+                align-items: center;
+                width: fit-content;
+                height: 50rem;
+            }
+            
+        /* Slider */
+        body {
+            margin: 0;
+            background: #EEE;
+            user-select: none;
+            font-family: sans-serif;
+        }
+        
+        #slider {
+            position: relative;
+            width: 50%;
+            height: 32vw;
+            margin: 150px auto;
+            font-family: 'Helvetica Neue', sans-serif;
+            perspective: 1400px;
+            transform-style: preserve-3d;
+        }
+        
+        input[type=radio] {
+            position: relative;
+            top: 108%;
+            left: 50%;
+            width: 18px;
+            height: 18px;
+            margin: 0 15px 0 0;
+            opacity: 0.4;
+            transform: translateX(-83px);
+            cursor: pointer;
+        }
+        
+        input[type=radio]:nth-child(5) {
+            margin-right: 0px;
+        }
+        
+        input[type=radio]:checked {
+            opacity: 1;
+        }
+        
+        #slider label,
+        #slider label img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 400ms ease;
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        /* Slider Functionality */
+        
+        /* Active Slide */
+        #s1:checked ~ #slide1,
+         #s2:checked ~ #slide2,
+          #s3:checked ~ #slide3,
+           #s4:checked ~ #slide4,
+            #s5:checked ~ #slide5 {
+            box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+            transform: translate3d(0%, 0, 0px);
+        }
+        
+        /* Next Slide */
+        #s1:checked ~ #slide2,
+         #s2:checked ~ #slide3,
+          #s3:checked ~ #slide4,
+           #s4:checked ~ #slide5,
+            #s5:checked ~ #slide1 {
+            box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+            transform: translate3d(20%, 0, -100px);
+        }
+        
+        
+        /* Next to Next Slide */
+        #s1:checked ~ #slide3,
+         #s2:checked ~ #slide4,
+          #s3:checked ~ #slide5,
+           #s4:checked ~ #slide1,
+            #s5:checked ~ #slide2 {
+            box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+            transform: translate3d(40%, 0, -250px);
+        }
+        
+        /* Previous to Previous Slide */
+        #s1:checked ~ #slide4,
+         #s2:checked ~ #slide5,
+          #s3:checked ~ #slide1,
+           #s4:checked ~ #slide2,
+            #s5:checked ~ #slide3 {
+            box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+            transform: translate3d(-40%, 0, -250px);
+        }
+        
+        /* Previous Slide */
+        #s1:checked ~ #slide5,
+         #s2:checked ~ #slide1,
+          #s3:checked ~ #slide2,
+           #s4:checked ~ #slide3,
+            #s5:checked ~ #slide4 {
+            box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+            transform: translate3d(-20%, 0, -100px);
+        }
+        
+        .checkout-btn {
+            background-color: #F9ED32;
+            color: #252525;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+
+        .checkout-btn:hover {
+            background-color: #FFF225;
+        }
+    </style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="black-background">
+    
+    <div class="stars"></div>
+</div>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="Black logo for B&W print.png" alt="Your Logo">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Products</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product1.html">Product 1</a></li>
+                        <li><a href="product2.html">Product 2</a></li>
+                        <li><a href="product3.html">Product 3</a></li>
+                        <!-- New expandable section -->
+                        <li class="dropdown">
+                            <a href="#">Rhyno SE03 Series</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="se03-lite.html">SE03 Lite</a></li>
+                                <li><a href="se03.html">SE03</a></li>
+                                <li><a href="se03-max.html">SE03 Max</a></li>
+                                <li><a href="compare-all.html">Compare all</a></li>
+                            </ul>
+                        </li>
+                        <!-- End of new section -->
+                    </ul>
+                </li>
+                <li><a href="Footer.html">Contact Us</a></li>
+                <li><a href="prebook.html">Pre-book now</a></li>
+                <li><a href="Rentals.html">Rentals</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    
+    <h2>
+        Let's Elevate Your Ride Experience With Rhyno – Where Superiority Meets Style. 
+    </h2>
+   
+</header>
+
+<!-- Slider -->
+<section id="slider">
+  <input type="radio" name="slider" id="s1" checked>
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3">
+  <input type="radio" name="slider" id="s4">
+  <input type="radio" name="slider" id="s5">
+
+  <label for="s1" id="slide1" class="card"><img src="final design try 2 cross view.177 (1).png" alt=""></label>
+  <label for="s2" id="slide2" class="card"><img src="final design try 2 cross view.177.png" alt=""></label>
+  <label for="s3" id="slide3" class="card"><img src="final design try 2 cross view.178.png" alt=""></label>
+  <!-- <label for="s4" id="slide4" class="card"><img src="final design try 2 cross view.182 (1).png" alt=""></label>
+  <label for="s5" id="slide5" class="card"><img src="final design try 2 cross view.183.png" alt=""></label> -->
+</section>
+
+<!-- Pre-book Now Button -->
+<a href="prebook.html" class="float-btn">Pre-book now</a>
+
+<footer>
+    <a href="Privacy Policy.html">Privacy Policy</a>
+    <a href="Refund policy.html">Refund Policy</a>
+    <a href="Website policy.html">Website Policy</a>
+    <a href="Footer.html">Contact Us</a>
+    <a href="Careers.html">Career</a>
+    <a href="prebook.html">Products</a>
+    <a href="Rentals.html">Rentals</a>
+    <a href="https://www.instagram.com"><img src="instagram.png" alt="Instagram Icon"></a>
+    <a href="https://www.linkedin.com"><img src="linkedin.png" alt="LinkedIn Icon"></a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

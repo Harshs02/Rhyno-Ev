@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-book (with Payment Gateway) - Rhyno EV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Footer styles */
+        footer {
+            background-color: #252525;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #F9ED32;
+        }
+
+        /* Pre-book Content styles */
+        .prebook-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .prebook-content h2 {
+            margin-bottom: 20px;
+            color: #F9ED32;
+        }
+
+        .prebook-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        /* Payment form styles */
+        .payment-form {
+            margin-top: 30px;
+        }
+
+        .payment-form input[type="text"],
+        .payment-form input[type="email"],
+        .payment-form select {
+            width: calc(100% - 20px);
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .payment-form input[type="submit"] {
+            background-color: #F9ED32;
+            color: #252525;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-form input[type="submit"]:hover {
+            background-color: #FFF225;
+        }
+
+        /* Confirmation message styles */
+        .confirmation-message {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #F9ED32;
+            color: #252525;
+            border-radius: 5px;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Pre-book Section -->
+<section id="pre-book" class="section">
+    <div class="prebook-content">
+        <h2>Pre-book (with Payment Gateway)</h2>
+        <p>Secure your Rhyno EV now! Fill out the form below to pre-book with our payment gateway.</p>
+        <form class="payment-form" id="payment-form" action="#">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Phone Number" required>
+            <select required>
+                <option value="">Select Model</option>
+                <option value="model1">Model 1</option>
+                <option value="model2">Model 2</option>
+                <option value="model3">Model 3</option>
+            </select>
+            <input type="submit" value="Pre-book Now" id="prebook-button">
+        </form>
+        <div class="confirmation-message" id="confirmation-message">
+            Thank you for pre-booking your Rhyno EV! We will get in touch with you shortly.
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Website Policy</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Products</a>
+    <a href="#">Career</a>
+    <a href="#">Rentals</a>
+</footer>
+
+<script>
+    document.getElementById("payment-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("prebook-button").disabled = true;
+        document.getElementById("confirmation-message").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("prebook-button").disabled = false;
+            document.getElementById("confirmation-message").style.display = "none";
+        }, 5000); // Hide confirmation message after 5 seconds
+    });
+</script>
+
+</body>
+</html>

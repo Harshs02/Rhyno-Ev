@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 3 - Rhyno EV</title>
+    <style>
+        /* Footer styles */
+        footer {
+            background-color: #252525;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #F9ED32;
+        }
+
+        /* Product Image styles */
+        .product-image {
+            display: block;
+            margin: 0 auto;
+            width: 500px;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .product-image:hover {
+            transform: rotateX(45deg) rotateY(30deg);
+        }
+
+        /* Buy Now Button styles */
+        .buy-btn {
+            display: block;
+            margin: 20px auto;
+            background-color: #F9ED32;
+            color: #252525;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background-color: #FFF225;
+            transform: translateY(-5px);
+        }
+
+        /* Product Details styles */
+        .product-details {
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details p {
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-details ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .product-details ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Product Heading styles */
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Animation for Product Page */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            animation: fadeIn 1s ease;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Product 3 Section -->
+<section id="product-3" class="section">
+    <div class="container">
+        <h2>Product 3 - Rhyno EV</h2>
+        <!-- Add image with rotation effect -->
+        <img src="final design try 2 cross view.183.png" alt="Product Image" class="product-image">
+        <div class="product-details">
+            <p><strong>Description:</strong> Rhyno EV is an electric vehicle designed for urban commuting. It features a compact design and agile performance for navigating city streets with ease.</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li><strong>Electric Motor:</strong> Efficient electric motor providing smooth acceleration and low operating costs.</li>
+                <li><strong>Size:</strong> Compact dimensions make it easy to maneuver through traffic and park in tight spaces.</li>
+                <li><strong>Battery:</strong> Lithium-ion battery with fast-charging capability for convenient recharging on the go.</li>
+                <li><strong>Range:</strong> Sufficient range for daily commuting, with options for extended range models.</li>
+                <li><strong>Technology:</strong> Integrated smart features such as GPS navigation, smartphone connectivity, and remote monitoring.</li>
+                <li><strong>Safety:</strong> Advanced safety systems including ABS brakes, traction control, and collision avoidance technology.</li>
+            </ul>
+            <p><strong>Price:</strong> $XXXX.XX</p>
+        </div>
+        <a href="#" class="buy-btn" onclick="showNotification()">Buy Now</a> <br><br><br>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Website Policy</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Products</a>
+    <a href="#">Career</a>
+    <a href="#">Rentals</a>
+</footer>
+
+<script>
+    function showNotification() {
+        alert("Thank you for purchasing Product 3 - Rhyno EV! You will receive a confirmation email shortly.");
+    }
+</script>
+
+</body>
+</html>

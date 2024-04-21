@@ -1,0 +1,195 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #252525;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #F9ED32;
+}
+
+footer img {
+    width: 20px; /* Adjust icon size */
+    margin-left: 15px; /* Add spacing between icons */
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    width: 150px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Add some margin between logo and navigation */
+    font-weight: bold; /* Make the logo bold */
+    background-color:#F9ED32 ;
+    border-radius: 10px;
+    
+
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+nav ul li a:hover {
+    color: #F9ED32; /* Change color on hover */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #252525;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.black-background {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:url(Stars.png) ; /* Adjust the URL of the star pattern */
+    animation: animateStars 10s linear infinite;
+}
+
+@keyframes animateStars {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110%);
+        opacity: 0;
+    }
+}
+
+
+.glow {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none; /* Prevent the element from affecting mouse events */
+    animation: glowAnimation 1s ease infinite alternate; /* Apply glowing animation */
+}
+
+@keyframes glowAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* CSS for the rental section
+#rental {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    /* z-index: 999; Ensure it appears above other content */
+    /* display: none; Initially hide the rental section */
+    /* overflow-y: auto; Enable vertical scrolling if needed */
+/* }
+
+#rental .container {
+    padding: 20px;
+    color: #FFFFFF;
+}
+
+/* CSS for the rental content */
+/* #rental h2 {
+    color: #FFFFFF;
+}
+
+#rental p {
+    color: #FFFFFF;
+}
+
+#rental .app-buttons {
+    margin-top: 20px;
+}
+
+#rental .app-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F9ED32;
+    color: #252525;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#rental .app-button img {
+    vertical-align: middle;
+    margin-right: 5px;
+}  */
+

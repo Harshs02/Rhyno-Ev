@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 2 - Rhyno EV</title>
+    <style>
+        /* Footer styles */
+        footer {
+            background-color: #252525;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0; /* Ensure footer is aligned to the left */
+            width: 100%; /* Make footer full width */
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #F9ED32;
+        }
+
+        /* Product Image styles */
+        .product-image {
+            display: block;
+            margin: 0 auto;
+            width: 500px; /* Increased width of product image */
+            height: auto; /* Maintain aspect ratio */
+            transition: transform 0.5s ease; /* Add transition for smooth rotation */
+        }
+
+        .product-image:hover {
+            transform: rotateX(45deg) rotateY(30deg); /* Apply 3D rotation effect on hover */
+        }
+
+        /* Buy Now Button styles */
+        .buy-btn {
+            display: block;
+            margin: 20px auto 60px; /* Adjust margin to push the button above the footer */
+            background-color: #F9ED32;
+            color: #252525;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth floating effect */
+        }
+
+        .buy-btn:hover {
+            background-color: #FFF225;
+            transform: translateY(-5px); /* Adjust floating distance as needed */
+        }
+
+        /* Product Details styles */
+        .product-details {
+            text-align: center; /* Center align the content */
+            margin-top: 50px; /* Add some top margin to the content */
+            background-color: #f9f9f9; /* Light gray background */
+            padding: 20px; /* Add padding */
+            border-radius: 10px; /* Add rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        .product-details p {
+            font-size: 18px; /* Adjust font size of product details */
+            line-height: 1.6; /* Increase line height for better readability */
+            font-weight: bold; /* Make text bold */
+            margin-bottom: 10px; /* Add some bottom margin */
+        }
+
+        .product-details ul {
+            list-style-type: none; /* Remove default list style */
+            padding: 0; /* Remove default padding */
+            text-align: left; /* Align text to the left */
+        }
+
+        .product-details ul li {
+            margin-bottom: 5px; /* Add some bottom margin to list items */
+        }
+
+        /* Product Heading styles */
+        h2 {
+            text-align: center; /* Center align the heading */
+        }
+
+        /* Animation for Product Page */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            animation: fadeIn 1s ease; /* Apply fade-in animation */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Product 2 Section -->
+<section id="product-2" class="section">
+    <div class="container">
+        <h2>Product 2 - Rhyno EV</h2>
+        <!-- Add image with rotation effect -->
+        <img src="Copy of Copy of final design try 2 cross view.168.png" alt="Product Image" class="product-image">
+        <div class="product-details">
+            <p><strong>Description:</strong> Rhyno EV is an electric vehicle designed for off-road adventures. It features rugged construction and advanced suspension for tackling challenging terrain.</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li><strong>Electric Motor:</strong> High-torque electric motor providing exceptional off-road performance.</li>
+                <li><strong>Suspension:</strong> Independent suspension system with adjustable dampers for optimal ride comfort and handling.</li>
+                <li><strong>Chassis:</strong> Reinforced steel chassis designed to withstand impacts and provide maximum protection.</li>
+                <li><strong>Tires:</strong> All-terrain tires with deep treads for superior traction on mud, sand, and rocky terrain.</li>
+                <li><strong>Range:</strong> Extended battery range allowing for long-distance off-road excursions without recharging.</li>
+                <li><strong>Accessories:</strong> Optional accessories include winches, roof racks, and off-road lighting for customization.</li>
+            </ul>
+            <p><strong>Price:</strong> $XXXX.XX</p>
+        </div>
+    </div>
+    <a href="#" class="buy-btn" onclick="showNotification()">Buy Now</a>
+</section>
+
+<footer>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Website Policy</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Products</a>
+    <a href="#">Career</a>
+    <a href="#">Rentals</a>
+</footer>
+<script>
+    function showNotification() {
+        alert("Thank you for purchasing Product 2 - Rhyno EV! You will receive a confirmation email shortly.");
+    }
+</script>
+</body>
+</html>

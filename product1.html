@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 1 - Rhyno EV</title>
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #212121;
+        }
+
+        section {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .row {
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            margin: 10px 0;
+            perspective: 1200px;
+        }
+
+        .card:hover .cover {
+            transform: rotateX(0deg) rotateY(-180deg);
+        }
+
+        .cover {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: ease all 2.3s;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .cover:before {
+            content: '';
+            position: absolute;
+            border: 5px solid rgba(255, 255, 255, .5);
+            box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            z-index: 2;
+            transition: ease all 2.3s;
+            transform-style: preserve-3d;
+            transform: translateZ(0px);
+        }
+
+        .cover:after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: 2;
+            transition: ease all 1.3s;
+            background: rgba(0, 0, 0, .4);
+        }
+
+        .cover.item-a {
+            background-image: url('DOUBLE SPLIT COMPLEMENTARY.118.png');
+        }
+
+        .cover h1 {
+            font-weight: 600;
+            position: absolute;
+            bottom: 55px;
+            left: 50px;
+            color: white;
+            transform-style: preserve-3d;
+            transition: ease all 2.3s;
+            z-index: 3;
+            font-size: 3em;
+            transform: translateZ(0px);
+        }
+
+        .cover .price {
+            font-weight: 200;
+            position: absolute;
+            top: 55px;
+            right: 50px;
+            color: white;
+            transform-style: preserve-3d;
+            transition: ease all 2.3s;
+            z-index: 4;
+            font-size: 2em;
+            transform: translateZ(0px);
+        }
+
+        .card-back {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: #0b0f08;
+            transition: ease all 2.3s;
+            transform: translateZ(-1px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backface-visibility: hidden;
+        }
+
+        .card-back a {
+            transition: ease transform 2.3s, ease background .5s;
+            background: transparent;
+            border: 1px solid white;
+            font-weight: 200;
+            font-size: 1.3em;
+            color: white;
+            padding: 10px 20px;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .card-back a:hover {
+            background-color: white;
+            color: #0b0f08;
+        }
+
+        .description {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 1.2em;
+            max-width: calc(100% - 40px);
+            overflow-y: auto;
+            max-height: calc(100% - 80px);
+            padding-right: 10px;
+            backface-visibility: hidden;
+        }
+
+        .buy-btn {
+            display: block;
+            margin: 20px auto; /* Center the button below the product image */
+            background-color: #F9ED32;
+            color: #252525;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth floating effect */
+        }
+
+        .buy-btn:hover {
+            background-color: #FFF225;
+            transform: translateY(-5px); /* Adjust floating distance as needed */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Product 1 Section -->
+<section>
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="card">
+                <div class="cover item-a">
+                    <img src="DOUBLE SPLIT COMPLEMENTARY.118.png" alt="Vehicle Image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="card-back">
+                        <div class="description">
+                            <h2>Product 1-Rhyno EV</h2>
+                            <p>Description: Rhyno EV is an electric vehicle designed for urban commuting. It features a sleek and aerodynamic design that maximizes efficiency and range.</p>
+                            <p>Specifications:</p>
+                            <ul>
+                                <li>Electric Motor: High-performance electric motor delivering instant torque for quick acceleration.</li>
+                                <li>Battery: Long-lasting lithium-ion battery pack providing a range of up to 200 miles on a single charge.</li>
+                                <li>Charging: Fast-charging capability, reaching 80% charge in just 30 minutes at compatible charging stations.</li>
+                                <li>Safety: Advanced safety features including automatic emergency braking, adaptive cruise control, and blind-spot monitoring.</li>
+                                <li>Connectivity: Integrated touchscreen display with navigation, music streaming, and smartphone connectivity.</li>
+                                <li>Comfort: Spacious interior with ergonomic seating and adjustable climate control for a comfortable driving experience.</li>
+                            </ul>
+                            <p>Price: $50000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Buy Now Button -->
+<a href="#" class="buy-btn" onclick="showNotification()">Buy Now</a>
+<script>
+    function showNotification() {
+        alert("Thank you for purchasing Product 1 - Rhyno EV! You will receive a confirmation email shortly.");
+    }
+</script>
+
+
+</body>
+</html>
